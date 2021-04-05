@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		126FF8FAF8DF1A2C3C9BCB75 /* Pods_BeatX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7C39913FD815BB7AFCEFC2 /* Pods_BeatX.framework */; };
+		5BABCC72261B18F000A1D230 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BABCC71261B18F000A1D230 /* GoogleService-Info.plist */; };
 		5BB7892D261B1856004FD89C /* launchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB78901261B1856004FD89C /* launchScreen.storyboard */; };
 		5BB7892E261B1856004FD89C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB78902261B1856004FD89C /* Main.storyboard */; };
 		5BB7892F261B1856004FD89C /* song1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BB78906261B1856004FD89C /* song1.mp3 */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		1C1B29349B80CD8E478136BA /* Pods-BeatZ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeatZ.debug.xcconfig"; path = "Target Support Files/Pods-BeatZ/Pods-BeatZ.debug.xcconfig"; sourceTree = "<group>"; };
+		5BABCC71261B18F000A1D230 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BB78901261B1856004FD89C /* launchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = launchScreen.storyboard; sourceTree = "<group>"; };
 		5BB78903261B1856004FD89C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BB78906261B1856004FD89C /* song1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song1.mp3; sourceTree = "<group>"; };
@@ -187,9 +189,10 @@
 		5BB7891D261B1856004FD89C /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				5BB7891E261B1856004FD89C /* AppDelegate.swift */,
-				5BB7891F261B1856004FD89C /* Info.plist */,
 				5BB78920261B1856004FD89C /* Actions.sks */,
+				5BB7891E261B1856004FD89C /* AppDelegate.swift */,
+				5BABCC71261B18F000A1D230 /* GoogleService-Info.plist */,
+				5BB7891F261B1856004FD89C /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB7892D261B1856004FD89C /* launchScreen.storyboard in Resources */,
+				5BABCC72261B18F000A1D230 /* GoogleService-Info.plist in Resources */,
 				5BB78945261B1856004FD89C /* Actions.sks in Resources */,
 				5BB78936261B1856004FD89C /* touchSong.mp3 in Resources */,
 				5BB78935261B1856004FD89C /* song4.mp3 in Resources */,

@@ -12,7 +12,7 @@ target 'BeatX' do
   pod 'Firebase/Database'
   
   # admob
-  pod 'Google-Mobile-Ads-SDK'
+  # pod 'Google-Mobile-Ads-SDK'
   
   
 end
