@@ -114,14 +114,14 @@
 		5BB788FF261B1856004FD89C /* BeatX */ = {
 			isa = PBXGroup;
 			children = (
-				5BC53658261B22FA00F5A751 /* Utils */,
-				5BC53653261B1ED400F5A751 /* Models */,
 				5BB7891D261B1856004FD89C /* Application */,
 				5BB78914261B1856004FD89C /* Assets.xcassets */,
 				5BB78917261B1856004FD89C /* Manages */,
+				5BC53653261B1ED400F5A751 /* Models */,
 				5BB78904261B1856004FD89C /* Resources */,
 				5BB78921261B1856004FD89C /* SpriteKits */,
 				5BB78900261B1856004FD89C /* StoryBoards */,
+				5BC53658261B22FA00F5A751 /* Utils */,
 				5BB78915261B1856004FD89C /* ViewControllers */,
 			);
 			path = BeatX;

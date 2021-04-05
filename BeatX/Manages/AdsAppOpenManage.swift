@@ -32,10 +32,14 @@ class AdsAppOpenManage: NSObject, GADFullScreenContentDelegate {
         if !AdsManage.sharedInstance.initialized() {
             return
         }
+        let data = FirebaseManage.sharedInstance.data()
+        if !data.enable_ads {
+            return
+        }
+        
         _appOpenAd = nil
         
         let orientation = UIApplication.shared.statusBarOrientation
-        let data = FirebaseManage.sharedInstance.data()
         GADAppOpenAd.load(withAdUnitID: data.id_app_open, request: GADRequest(), orientation: orientation) { (ad, error) in
             if error != nil {
                 return
@@ -47,6 +51,10 @@ class AdsAppOpenManage: NSObject, GADFullScreenContentDelegate {
     }
     
     func showAds() {
+        if !FirebaseManage.sharedInstance.data().enable_ads {
+            return
+        }
+        
         if let ad = self._appOpenAd, self.wasLoadTimeLessThanNHoursAgo(4.0) {
             guard let rootVC = UIApplication.getTopController() else { return }
             

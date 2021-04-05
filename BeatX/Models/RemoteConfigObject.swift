@@ -19,10 +19,10 @@ enum ButtonID: String {
 }
 
 class RemoteConfigObject: NSObject {
-    var id_banner: String = "ca-app-pub-3940256099942544/2934735716"
-    var id_interstitial: String = "ca-app-pub-3940256099942544/4411468910"
-    var id_rewarded_interstitial: String = "ca-app-pub-3940256099942544/6978759866"
-    var id_app_open: String = "ca-app-pub-3940256099942544/5662855259"
+    var id_banner: String = "ca-app-pub-6567326132643016/1465560456"
+    var id_interstitial: String = "ca-app-pub-6567326132643016/9152478780"
+    var id_rewarded_interstitial: String = "ca-app-pub-6567326132643016/5213233778"
+    var id_app_open: String = "ca-app-pub-6567326132643016/3900152109"
     var enable_ads: Bool = false
     var rate_game: Bool = false
     var buttons_show_interstitial: [ButtonID] = []

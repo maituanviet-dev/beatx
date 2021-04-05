@@ -25,9 +25,12 @@ class AdsInterstitialManage: NSObject, GADFullScreenContentDelegate {
         if !AdsManage.sharedInstance.initialized() {
             return
         }
-        _interstitial = nil
-        
         let data = FirebaseManage.sharedInstance.data()
+        if !data.enable_ads {
+            return
+        }
+        
+        _interstitial = nil
         GADInterstitialAd.load(withAdUnitID: data.id_interstitial, request: GADRequest()) { [self] ad, error in
             if error != nil {
                 return
@@ -39,6 +42,10 @@ class AdsInterstitialManage: NSObject, GADFullScreenContentDelegate {
     
     func showAds(_ completion: @escaping (() -> Void)) {
         _onCompletion = nil
+        if !FirebaseManage.sharedInstance.data().enable_ads {
+            completion()
+            return
+        }
         
         if let ad = _interstitial {
             guard let rootVC = UIApplication.getTopController() else { return }
