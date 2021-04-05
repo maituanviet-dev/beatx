@@ -67,11 +67,25 @@ class GameScene: SKScene {
         let backToHomeButton = popup.childNode(withName: "backToHomeButton") as? MSButtonNode
         //handler pop up
         resumeButton?.selectedHandler = {
-            self.resume()
+            if FirebaseManage.sharedInstance.canShowInterstitial(.resume) {
+                AdsInterstitialManage.sharedInstance.showAds {
+                    self.resume()
+                }
+            }
+            else {
+                self.resume()
+            }
         }
         
         backToHomeButton?.selectedHandler = {
-            self.backToHome()
+            if FirebaseManage.sharedInstance.canShowInterstitial(.back_home) {
+                AdsInterstitialManage.sharedInstance.showAds {
+                    self.backToHome()
+                }
+            }
+            else {
+                self.backToHome()
+            }
         }
         
         // add background music

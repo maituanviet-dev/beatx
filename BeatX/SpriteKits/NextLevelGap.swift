@@ -21,7 +21,7 @@ class NextLevelGap: SKScene {
     var total = 0
     var customGame = false
     let LEADERBOARD_ID = "tuanviet.studio.beatx.leaderboard"
-
+    
     override func didMove(to view: SKView) {
         total = miss + cool + great + perfect
         completePercent = ceil((1 - (Double(miss)/Double(total)))*100)
@@ -43,7 +43,7 @@ class NextLevelGap: SKScene {
         greatLabel.text = "\(great)"
         coolLabel.text = "\(cool)"
         missLabel.text = "\(miss)"
-
+        
         //handler
         if (completePercent < 80 || customGame) {
             titleLabel.text = "GameOver"
@@ -56,14 +56,39 @@ class NextLevelGap: SKScene {
         }
         
         backToHomeButton.selectedHandler = {
-            self.loadHome()
+            if FirebaseManage.sharedInstance.canShowInterstitial(.back_home) {
+                AdsInterstitialManage.sharedInstance.showAds {
+                    self.loadHome()
+                }
+            }
+            else {
+                self.loadHome()
+            }
         }
         
         startGameButton.selectedHandler = {
             if (self.completePercent < 80) {
-                self.retry()
+                AdsRewardedManage.sharedInstance.showAds { (type) in
+                    if type == .did_earn_reward {
+                        self.retry()
+                    }
+                    else if type == .no_ads {
+                        self.showAlert(title: "Notice", message: "Sorry, we don't have any ads to show.")
+                    }
+                    else {
+                        // error or haven't seen all the ads yet
+                        self.showAlert(title: "Notice", message: "You haven't seen all the ads yet.")
+                    }
+                }
             } else {
-                self.loadGame()
+                if FirebaseManage.sharedInstance.canShowInterstitial(.next_level) {
+                    AdsInterstitialManage.sharedInstance.showAds {
+                        self.loadGame()
+                    }
+                }
+                else {
+                    self.loadGame()
+                }
             }
         }
         
@@ -74,6 +99,16 @@ class NextLevelGap: SKScene {
         let completeAnimation = SKAction.fadeAlpha(to: 1.0, duration: 1.0)
         completeLabel.run(completeAnimation)
     }
+    
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        
+        if let rootController = UIApplication.getTopController() {
+            rootController.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     func loadGame() {
         guard let skView = self.view else {
             print("Could not get Skview")

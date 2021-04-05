@@ -53,14 +53,35 @@ class MainMenu: SKScene, GKGameCenterControllerDelegate {
         let campaignButton = self.childNode(withName: "campaignButton") as? MSButtonNode
         
         campaignButton?.selectedHandler = {
-            self.loadGame()
+            if FirebaseManage.sharedInstance.canShowInterstitial(.campain) {
+                AdsInterstitialManage.sharedInstance.showAds {
+                    self.loadGame()
+                }
+            }
+            else {
+                self.loadGame()
+            }
         }
         
         customButton.selectedHandler = {
-            self.loadCustomScreen()
+            if FirebaseManage.sharedInstance.canShowInterstitial(.custom) {
+                AdsInterstitialManage.sharedInstance.showAds {
+                    self.loadCustomScreen()
+                }
+            }
+            else {
+                self.loadCustomScreen()
+            }
         }
         buttonGameCenter.selectedHandler = {
-            self.gameCenterAction()
+            if FirebaseManage.sharedInstance.canShowInterstitial(.game_center) {
+                AdsInterstitialManage.sharedInstance.showAds {
+                    self.gameCenterAction()
+                }
+            }
+            else {
+                self.gameCenterAction()
+            }
         }
     }
     
@@ -145,7 +166,7 @@ class MainMenu: SKScene, GKGameCenterControllerDelegate {
             currentViewController.present(gcVC, animated: true, completion: nil)
         }
     }
-
+    
     private func shareAction() {
         // Setting description
         let firstActivityItem = "Try this game and play with me. It would be fun!"

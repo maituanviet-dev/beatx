@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1007893240873-l4a1flij71fsnr5pk59bjv9sd7rovsqf.apps.googleusercontent.com</string>
+	<string>509223109064-uiilln9pr5fnnu5m34r6j2fkmemu7e4g.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1007893240873-l4a1flij71fsnr5pk59bjv9sd7rovsqf</string>
+	<string>com.googleusercontent.apps.509223109064-uiilln9pr5fnnu5m34r6j2fkmemu7e4g</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDdUn4i_Oh2ss_h3Ygi2FeVqWzKS-0AG6M</string>
+	<string>AIzaSyCU_SoDOKSRULQlvpeDFhEbPCMojfcVxL4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1007893240873</string>
+	<string>509223109064</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>tuanviet.studio.BeatX</string>
 	<key>PROJECT_ID</key>
-	<string>beatz-7111e</string>
+	<string>beatx-game</string>
 	<key>STORAGE_BUCKET</key>
-	<string>beatz-7111e.appspot.com</string>
+	<string>beatx-game.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1007893240873:ios:e57c5311d004c035b1d038</string>
+	<string>1:509223109064:ios:a9854be65a205b1d5d00fd</string>
 </dict>
 </plist>

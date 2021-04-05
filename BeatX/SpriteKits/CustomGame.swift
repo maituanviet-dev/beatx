@@ -34,7 +34,14 @@ class CustomGame: SKScene {
         
         //handler
         startButton?.selectedHandler = {
-            self.loadGame()
+            if FirebaseManage.sharedInstance.canShowInterstitial(.start) {
+                AdsInterstitialManage.sharedInstance.showAds {
+                    self.loadGame()
+                }
+            }
+            else {
+                self.loadGame()
+            }
         }
         
         songButtonRight?.selectedHandler = {
