@@ -21,7 +21,7 @@ class NextLevelGap: SKScene {
     var total = 0
     var customGame = false
     let LEADERBOARD_ID = "tuanviet.studio.beatx.leaderboard"
-    
+    var currentScore: Int! = 0
     override func didMove(to view: SKView) {
         total = miss + cool + great + perfect
         completePercent = ceil((1 - (Double(miss)/Double(total)))*100)
@@ -131,7 +131,7 @@ class NextLevelGap: SKScene {
         }
         let scene = GameScene(fileNamed: "GameScene")!
         scene.level = level
-        scene.score = score
+        scene.score = currentScore
         scene.scaleMode = .aspectFill
         skView.showsPhysics = false
         skView.showsDrawCount = false

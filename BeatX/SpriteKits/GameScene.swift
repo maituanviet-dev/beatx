@@ -49,7 +49,7 @@ class GameScene: SKScene {
     var timeBar: SKSpriteNode!
     var customGame = false
     var soundTouch = SKAction.playSoundFileNamed("touchSong.mp3", waitForCompletion: true)
-
+    var currentScore = 0
     override func didMove(to view: SKView) {
         registerBroastcast()
         buttonUp = self.childNode(withName: "buttonUp") as? MSButtonNode
@@ -357,6 +357,7 @@ extension GameScene {
         scene.perfect = perfect
         scene.miss = miss
         scene.customGame = self.customGame
+        scene.currentScore = self.currentScore
         scene.scaleMode = .aspectFill
         skView.showsPhysics = false
         skView.showsDrawCount = false
@@ -378,7 +379,6 @@ extension GameScene {
     }
     
     func paused() {
-        print("alo")
         self.black_background.alpha = 0.7
         self.popup.alpha = 1.0
         self.realPaused = true

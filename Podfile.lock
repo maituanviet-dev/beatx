@@ -83,7 +83,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
 
 SPEC REPOS:
-  trunk:
+  https://cdn.cocoapods.org/:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -115,6 +115,6 @@ SPEC CHECKSUMS:
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 9a89d30e21eb93b504b509b10c5d8555b8539481
+PODFILE CHECKSUM: 3fb44c58a5b1cdf4cdf041869026aed867a61ecd
 
 COCOAPODS: 1.10.1
