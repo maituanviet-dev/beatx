@@ -46,6 +46,7 @@
 		5BB78950261B1856004FD89C /* NextLevelGap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BB7892C261B1856004FD89C /* NextLevelGap.sks */; };
 		5BC53655261B1FE800F5A751 /* RemoteConfigObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC53654261B1FE800F5A751 /* RemoteConfigObject.swift */; };
 		5BC5365A261B230500F5A751 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC53659261B230500F5A751 /* Extensions.swift */; };
+		CF4E174E261D4AD800D9E155 /* MSButtonNodeCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E174D261D4AD800D9E155 /* MSButtonNodeCustom.swift */; };
 		CFD4063825FF6D710007A505 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD4063725FF6D710007A505 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		5BC53659261B230500F5A751 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9EA781D06C922A525D16DB74 /* Pods-BeatX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeatX.debug.xcconfig"; path = "Target Support Files/Pods-BeatX/Pods-BeatX.debug.xcconfig"; sourceTree = "<group>"; };
 		A1FB3155C3F07AD9BE16DF5B /* Pods-BeatX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeatX.release.xcconfig"; path = "Target Support Files/Pods-BeatX/Pods-BeatX.release.xcconfig"; sourceTree = "<group>"; };
+		CF4E174D261D4AD800D9E155 /* MSButtonNodeCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSButtonNodeCustom.swift; sourceTree = "<group>"; };
 		CF836C9825FC515D00EA5424 /* BeatX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeatX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD4063725FF6D710007A505 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		DE7C39913FD815BB7AFCEFC2 /* Pods_BeatX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeatX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 				5BB78922261B1856004FD89C /* MainMenu.sks */,
 				5BB78923261B1856004FD89C /* MainMenu.swift */,
 				5BB78927261B1856004FD89C /* MSButtonNode.swift */,
+				CF4E174D261D4AD800D9E155 /* MSButtonNodeCustom.swift */,
 				5BB7892C261B1856004FD89C /* NextLevelGap.sks */,
 				5BB78924261B1856004FD89C /* NextLevelGap.swift */,
 				5BB78928261B1856004FD89C /* Step.swift */,
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4E174E261D4AD800D9E155 /* MSButtonNodeCustom.swift in Sources */,
 				5BB7894A261B1856004FD89C /* CustomGame.swift in Sources */,
 				5BB7893D261B1856004FD89C /* GameViewController.swift in Sources */,
 				5BB78942261B1856004FD89C /* FirebaseManage.swift in Sources */,

@@ -10,10 +10,10 @@ import GameplayKit
 
 class GameScene: SKScene {
     let faded = SKTransition.fade(with: .black, duration: 1)
-    var buttonUp: MSButtonNode!
-    var buttonDown: MSButtonNode!
-    var buttonLeft: MSButtonNode!
-    var buttonRight: MSButtonNode!
+    var buttonUp: MSButtonNodeCustom!
+    var buttonDown: MSButtonNodeCustom!
+    var buttonLeft: MSButtonNodeCustom!
+    var buttonRight: MSButtonNodeCustom!
     var arrayButtonUp: Array<Step> = []
     var arrayButtonDown: Array<Step> = []
     var arrayButtonLeft: Array<Step> = []
@@ -52,10 +52,10 @@ class GameScene: SKScene {
     var currentScore = 0
     override func didMove(to view: SKView) {
         registerBroastcast()
-        buttonUp = self.childNode(withName: "buttonUp") as? MSButtonNode
-        buttonDown = self.childNode(withName: "buttonDown") as? MSButtonNode
-        buttonLeft = self.childNode(withName: "buttonLeft") as? MSButtonNode
-        buttonRight = self.childNode(withName: "buttonRight") as? MSButtonNode
+        buttonUp = self.childNode(withName: "buttonUp") as? MSButtonNodeCustom
+        buttonDown = self.childNode(withName: "buttonDown") as? MSButtonNodeCustom
+        buttonLeft = self.childNode(withName: "buttonLeft") as? MSButtonNodeCustom
+        buttonRight = self.childNode(withName: "buttonRight") as? MSButtonNodeCustom
         scoreLabel = self.childNode(withName: "scoreLabel") as? SKLabelNode
         timeBar = self.childNode(withName: "timeBar") as? SKSpriteNode
         let levelLabel = self.childNode(withName: "levelLabel") as? SKLabelNode
@@ -153,6 +153,7 @@ class GameScene: SKScene {
                     } else {
                         self.scoreUp(score: 5)
                     }
+                    item.removeAllActions()
                     self.arrayButtonDown.removeFirst()
                     item.run(SKAction.group([scaleAnimation, blurAnimation])) {
                         item.removeFromParent()
@@ -170,6 +171,7 @@ class GameScene: SKScene {
                     } else {
                         self.scoreUp(score: 5)
                     }
+                    item.removeAllActions()
                     self.arrayButtonLeft.removeFirst()
                     item.run(SKAction.group([scaleAnimation, blurAnimation])) {
                         item.removeFromParent()
@@ -187,6 +189,7 @@ class GameScene: SKScene {
                     } else {
                         self.scoreUp(score: 5)
                     }
+                    item.removeAllActions()
                     self.arrayButtonRight.removeFirst()
                     item.run(SKAction.group([scaleAnimation, blurAnimation])) {
                         item.removeFromParent()
